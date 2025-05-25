@@ -78,8 +78,8 @@ Interface	Streamlit
 # 1. Clone the repo
 bash 
 ```
-git clone https://github.com/yourusername/multilingual-voice-rag.git
-cd multilingual-voice-rag
+git clone https://github.com/yourusername/FlickDone.git
+cd FlickDone
 ```
 
 # 2. Install dependencies
