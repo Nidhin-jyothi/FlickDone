@@ -85,7 +85,7 @@ gTTS for accurate multilingual synthesis.
 
 Fallback to pyttsx3 for unsupported languages.
 
-###📦 Tech Stack
+## 📦 Tech Stack
 Component	Tool/Library
 STT	openai/whisper
 TTS	gTTS, pyttsx3
@@ -97,9 +97,6 @@ LLM	Gemini 1.5 Pro (Google Generative AI)
 Interface	Streamlit
 
 🛠 Setup Instructions
-bash
-Copy
-Edit
 # 1. Clone the repo
 bash 
 ```
