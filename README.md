@@ -120,15 +120,18 @@ bash
 ```
 streamlit run app.py
 ```
-🌍 Supported Languages
-Code	Language
-en	English
-es	Spanish
-fr	French
-de	German
-it	Italian
-pt	Portuguese
-ru	Russian
-ja	Japanese
-ko	Korean
-zh	Chinese
+## 🌍 Supported Languages
+
+| Code | Language   |
+|------|------------|
+| en   | English    |
+| es   | Spanish    |
+| fr   | French     |
+| de   | German     |
+| it   | Italian    |
+| pt   | Portuguese |
+| ru   | Russian    |
+| ja   | Japanese   |
+| ko   | Korean     |
+| zh   | Chinese    |
+
