@@ -101,17 +101,28 @@ bash
 Copy
 Edit
 # 1. Clone the repo
+bash 
+```
 git clone https://github.com/yourusername/multilingual-voice-rag.git
 cd multilingual-voice-rag
+```
 
 # 2. Install dependencies
+bash 
+```
 pip install -r requirements.txt
-
+```
 # 3. Add your Gemini API key
+bash
+```
 echo "GOOGLE_API_KEY=your_key_here" > .env
+```
 
 # 4. Launch the app
+bash 
+```
 streamlit run app.py
+```
 🌍 Supported Languages
 Code	Language
 en	English
