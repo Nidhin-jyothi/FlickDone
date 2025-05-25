@@ -23,20 +23,7 @@ An accessible, multilingual AI assistant that combines Whisper, Gemini 1.5 Pro, 
 
 ## 📐 Architecture Overview
 
-```mermaid
-graph LR
-  A[User (Voice Input)] --> B[Microphone Recording]
-  B --> C[Whisper Speech-to-Text]
-  C --> D{RAG or Direct?}
-  D -->|RAG| E[Vector Store (FAISS)]
-  E --> F[Contextual Document Retrieval]
-  F --> G[Gemini 1.5 Pro QA Chain]
-  D -->|Direct| H[Gemini 1.5 Pro Direct Prompt]
-  G --> I[Text Response]
-  H --> I
-  I --> J[gTTS or pyttsx3 TTS]
-  J --> K[Audio Output (pygame)]
-```
+![Diagram](diagram.png)
 
 ## 🚀 Features
 ✅ Real-time voice input using speech_recognition
@@ -45,7 +32,7 @@ graph LR
 
 ✅ PDF/Text document ingestion and vectorization
 
-✅ RAG-based answer generation with Gemini 1.5 Pro
+✅ RAG-based answer generation with gemini-1.5-flash-latest
 
 ✅ Fallback direct generation when RAG is unavailable
 
@@ -53,36 +40,28 @@ graph LR
 
 ✅ Conversation history export
 
-### 🧠 RAG Pipeline Implementation Notes
-Text Ingestion
+## 🧠 RAG Pipeline Implementation Notes
 
-Supports .pdf and .txt documents.
+### 📄 Text Ingestion
+- Supports `.pdf` and `.txt` documents.
+- Documents are split into 1000-character chunks with 200-character overlap using `RecursiveCharacterTextSplitter`.
 
-Text is split into 1000-character chunks with 200-character overlap using RecursiveCharacterTextSplitter.
+### 🧬 Embedding & Indexing
+- Embeddings generated using `sentence-transformers/all-MiniLM-L6-v2`.
+- Chunks are embedded and stored in a `FAISS` vector store.
+- FAISS index is serialized to disk for persistence and fast loading.
 
-Embedding & Indexing
+### 🎤 Voice Input Pipeline
+- Audio recorded from microphone (default: 5 seconds).
+- Transcription performed using `Whisper` with automatic or user-specified language detection.
 
-Uses sentence-transformers/all-MiniLM-L6-v2.
+### 🌐 Multilingual Prompt Template
+- Uses a friendly, empathetic prompt format optimized for spoken output.
+- Contextual response generated via `gemini-1.5-flash-latest` QA Chain with document-aware prompt templating.
 
-Chunks are embedded and stored in FAISS, serialized to disk.
-
-Voice Input Pipeline
-
-Audio recorded from mic (default 5s).
-
-Transcription via Whisper with automatic or user-defined language.
-
-Multilingual Prompt Template
-
-Empathetic, audio-friendly format.
-
-Response generation uses Gemini QA chain with prompt templating.
-
-TTS Output
-
-gTTS for accurate multilingual synthesis.
-
-Fallback to pyttsx3 for unsupported languages.
+### 🔊 TTS Output
+- `gTTS` used for high-quality multilingual speech synthesis.
+- Falls back to `pyttsx3` for offline or unsupported language scenarios.
 
 ## 📦 Tech Stack
 Component	Tool/Library
