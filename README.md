@@ -6,19 +6,18 @@ An accessible, multilingual AI assistant that combines Whisper, Gemini 1.5 Pro, 
 
 ## 📸 Screenshots
 
-### 🧾 Upload & Embedding Phase
-![Upload Document Screenshot](assets/screenshots/upload_embed.png)
+### 🧾 Upload & Transcibe Phase
+![Upload Document Screenshot](upload_embed.png)
 
-### 🎙️ Multilingual Voice QA Interface
-![Voice Chat Interface Screenshot](assets/screenshots/voice_chat_interface.png)
+### 🎙️ Multilingual Voice output Interface
+![Voice Chat Interface Screenshot](voice_chat_interface.png)
 
 ---
 
 ## 📽️ Demo Video
 
-[![Watch Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
+[![Watch Demo]](https://drive.google.com/file/d/16DwGGjd67uY0tB_H_AZrwZdk1RfMyip9/view?usp=sharing)
 
-> 🔗 [Click here to watch on YouTube](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
 
 ---
 
@@ -93,7 +92,7 @@ Audio Input	speech_recognition + pydub
 Audio Output	pygame
 Vector Store	FAISS
 Embeddings	sentence-transformers
-LLM	Gemini 1.5 Pro (Google Generative AI)
+LLM	gemini-1.5-flash-latest (Google Generative AI)
 Interface	Streamlit
 
 🛠 Setup Instructions

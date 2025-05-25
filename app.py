@@ -545,9 +545,9 @@ def main():
         
         # System status indicators
         if hasattr(rag_system, 'llm') and rag_system.llm:
-            st.success("✅ Gemini 1.5 Pro: Ready")
+            st.success("✅ gemini-1.5-flash-latest: Ready")
         else:
-            st.error("❌ Gemini 1.5 Pro: Not available")
+            st.error("❌ gemini-1.5-flash-latest: Not available")
         
         if rag_system.vector_store:
             st.success("✅ Knowledge Base: Ready")
@@ -584,7 +584,7 @@ def main():
         # Model information
         st.header("🤖 Model Information")
         st.markdown("""
-        **Gemini 1.5 Pro Features:**
+        **gemini-1.5-flash-latest Features:**
         - Advanced reasoning capabilities
         - Multilingual support
         - Large context window (1M tokens)
